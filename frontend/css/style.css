@@ -1,0 +1,699 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   TASK PAGE
+========================= */
+
+main {
+    width: 84%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 0 80px;
+}
+
+main > h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CREATE TASK
+========================= */
+
+.create-task {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 35px;
+    padding: 30px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+}
+
+.create-task h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.create-task input,
+.create-task textarea,
+.create-task select {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+
+    background: #0f172a;
+    color: #f8fafc;
+
+    border: 1px solid #475569;
+    border-radius: 8px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.create-task textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.create-task input:focus,
+.create-task textarea:focus,
+.create-task select:focus {
+    border-color: #38bdf8;
+}
+
+#createTaskBtn,
+#loadTasksBtn {
+    padding: 12px 22px;
+
+    background: #38bdf8;
+    color: #0f172a;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#createTaskBtn:hover,
+#loadTasksBtn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+#loadTasksBtn {
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TASK LIST
+========================= */
+
+#tasksContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#tasksContainer > div {
+    padding: 22px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+#tasksContainer h3 {
+    color: #38bdf8;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+#tasksContainer p {
+    color: #cbd5e1;
+    margin-bottom: 5px;
+}
+
+#tasksContainer hr {
+    border: none;
+    border-top: 1px solid #334155;
+    margin-top: 15px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #38bdf8;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #38bdf8;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 580px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.primary-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #475569;
+    color: #f8fafc;
+}
+
+.secondary-btn:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    position: relative;
+    text-align: center;
+}
+
+.image-container {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 3px solid #38bdf8;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-card {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    padding: 16px 20px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.profile-card strong {
+    color: #38bdf8;
+}
+
+.profile-card p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    padding: 100px 8%;
+    text-align: center;
+    background: #111827;
+}
+
+.features h2,
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 35px 25px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.about p {
+    color: #94a3b8;
+    margin: 10px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #020617;
+    color: #64748b;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        width: 90%;
+        padding-top: 35px;
+    }
+
+    main > h1 {
+        font-size: 34px;
+    }
+
+    .create-task {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .features h2,
+    .about h2 {
+        font-size: 32px;
+    }
+}
+/* =========================
+   TASK ACTION BUTTONS
+========================= */
+
+.edit-btn,
+.delete-btn {
+    padding: 9px 18px;
+    margin-top: 12px;
+    margin-right: 8px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.edit-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+.complete-btn {
+    padding: 9px 18px;
+    margin-top: 12px;
+    margin-right: 8px;
+
+    background: #22c55e;
+    color: #052e16;
+
+    border: none;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.complete-btn:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+/* =========================
+   TASK CARD POLISH
+========================= */
+
+#tasksContainer {
+    margin-top: 30px;
+}
+
+#tasksContainer > div {
+    padding: 25px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+#tasksContainer > div:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+#tasksContainer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+#tasksContainer p {
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+.edit-btn,
+.delete-btn,
+.complete-btn {
+    padding: 9px 18px;
+    margin-top: 12px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.edit-btn {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.edit-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+}
+
+.complete-btn {
+    background: #22c55e;
+    color: #052e16;
+}
+
+.complete-btn:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+/* =========================
+   TASK STATUS
+========================= */
+
+.task-status {
+    margin-top: 12px;
+}
+
+.task-status span {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.task-status .completed {
+    background: #14532d;
+    color: #86efac;
+}
+
+.task-status .pending {
+    background: #713f12;
+    color: #fde68a;
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        width: 92%;
+        padding: 35px 0 60px;
+    }
+
+    main > h1 {
+        font-size: 32px;
+    }
+
+    .create-task {
+        padding: 20px;
+    }
+
+    .create-task h2 {
+        font-size: 24px;
+    }
+
+    #tasksContainer > div {
+        padding: 20px;
+    }
+
+    .edit-btn,
+    .delete-btn,
+    .complete-btn {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>TaskFlow | My Tasks</title>
+
+<link rel="stylesheet" href="css/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<header class="navbar">
+
+    <div class="logo">
+        Task<span>Flow</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="tasks.html">My Tasks</a>
+        <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <h1>My Tasks</h1>
+
+
+    <!-- CREATE TASK -->
+
+    <section class="create-task">
+
+        <h2>Create New Task</h2>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Task title"
+        >
+
+        <textarea
+            id="description"
+            placeholder="Task description"
+        ></textarea>
+
+        <select id="priority">
+
+            <option value="low">
+                Low
+            </option>
+
+            <option value="medium" selected>
+                Medium
+            </option>
+
+            <option value="high">
+                High
+            </option>
+
+        </select>
+
+        <input
+            type="date"
+            id="dueDate"
+        >
+
+        <button id="createTaskBtn">
+            Create Task
+        </button>
+
+    </section>
+
+
+    <!-- LOAD TASKS -->
+
+    <button id="loadTasksBtn">
+        Load My Tasks
+    </button>
+
+
+    <!-- TASKS WILL APPEAR HERE -->
+
+    <div id="tasksContainer"></div>
+
+</main>
+
+
+<script src="js/tasks.js"></script>
+```
+
+</body>
+</html>

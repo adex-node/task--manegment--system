@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | TaskFlow</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Task<span>Flow</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#features">
+                Features
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= REGISTER ================= -->
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="auth-info">
+
+                <p class="small-title">
+                    JOIN TASKFLOW
+                </p>
+
+                <h1>
+                    Start Managing
+                    <span>Your Tasks.</span>
+                </h1>
+
+                <p>
+                    Create your account and start organizing
+                    your tasks, priorities and daily work.
+                </p>
+
+                <div class="auth-feature">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Easy Task Management
+                        </strong>
+
+                        <p>
+                            Create and organize your tasks easily.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Secure Account
+                        </strong>
+
+                        <p>
+                            Your account is protected with authentication.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="auth-feature">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Stay Productive
+                        </strong>
+
+                        <p>
+                            Keep your work organized in one place.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE / FORM -->
+
+            <div class="auth-card">
+
+                <div class="form-heading">
+
+                    <h2>
+                        Create Account
+                    </h2>
+
+                    <p>
+                        Register to get started with TaskFlow.
+                    </p>
+
+                </div>
+
+
+                <!-- REGISTER FORM -->
+
+                <form id="registerForm">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- CONFIRM PASSWORD -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the terms and conditions.
+                        </label>
+
+                    </div>
+
+
+                    <!-- ERROR / SUCCESS MESSAGE -->
+
+                    <div
+                        id="message"
+                        class="message"
+                    ></div>
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Create Account
+                    </button>
+
+
+                </form>
+
+
+                <!-- LOGIN LINK -->
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Task<span>Flow</span>
+        </div>
+
+        <p>
+            Built by Adane • Computer Science Student
+        </p>
+
+        <p class="copyright">
+            © 2026 TaskFlow. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/register.js"></script>
+
+</body>
+
+</html>
