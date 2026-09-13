@@ -1,9 +1,11 @@
+
 const loadTasksBtn = document.getElementById("loadTasksBtn");
 const token = localStorage.getItem("token");
 
 if (!token) {
     window.location.href = "login.html";
 }
+
 const tasksContainer = document.getElementById("tasksContainer");
 
 const createTaskBtn = document.getElementById("createTaskBtn");
@@ -12,6 +14,7 @@ const titleInput = document.getElementById("title");
 const descriptionInput = document.getElementById("description");
 const priorityInput = document.getElementById("priority");
 const dueDateInput = document.getElementById("dueDate");
+
 
 
 
@@ -43,7 +46,7 @@ createTaskBtn.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-           "https://task-manegment-system.onrender.com/task",
+            "https://task-manegment-system.onrender.com/task",
             {
                 method: "POST",
 
@@ -100,7 +103,7 @@ loadTasksBtn.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/task",
+            "https://task-manegment-system.onrender.com/task",
             {
                 method: "GET",
 
@@ -120,8 +123,6 @@ loadTasksBtn.addEventListener("click", async () => {
         tasksContainer.innerHTML = "";
 
 
-        
-
         data.tasks.forEach(task => {
 
             const taskElement =
@@ -138,19 +139,19 @@ loadTasksBtn.addEventListener("click", async () => {
                 </p>
 
                 <p class="task-status">
-    Status:
-    <span class="${
-        task.completed
-        ? "completed"
-        : "pending"
-    }">
-        ${
-            task.completed
-            ? "Completed ✅"
-            : "Pending ⏳"
-        }
-    </span>
-</p>
+                    Status:
+                    <span class="${
+                        task.completed
+                        ? "completed"
+                        : "pending"
+                    }">
+                        ${
+                            task.completed
+                            ? "Completed ✅"
+                            : "Pending ⏳"
+                        }
+                    </span>
+                </p>
 
                 ${
                     task.dueDate
@@ -197,9 +198,6 @@ loadTasksBtn.addEventListener("click", async () => {
 
         });
 
-
-     
-        
 
         const editButtons =
             document.querySelectorAll(".edit-btn");
@@ -254,7 +252,7 @@ loadTasksBtn.addEventListener("click", async () => {
 
                         const updateResponse =
                             await fetch(
-                                `http://localhost:5000/task/${taskId}`,
+                                `https://task-manegment-system.onrender.com/task/${taskId}`,
                                 {
                                     method: "PUT",
 
@@ -299,6 +297,7 @@ loadTasksBtn.addEventListener("click", async () => {
                     } catch (error) {
 
                         console.error(error);
+
                         alert(
                             "Server connection failed"
                         );
@@ -310,9 +309,6 @@ loadTasksBtn.addEventListener("click", async () => {
 
         });
 
-
-    
-        
 
         const deleteButtons =
             document.querySelectorAll(".delete-btn");
@@ -339,7 +335,7 @@ loadTasksBtn.addEventListener("click", async () => {
 
                         const deleteResponse =
                             await fetch(
-                                `http://localhost:5000/task/${taskId}`,
+                                `https://task-manegment-system.onrender.com/task/${taskId}`,
                                 {
                                     method: "DELETE",
 
@@ -373,6 +369,7 @@ loadTasksBtn.addEventListener("click", async () => {
                     } catch (error) {
 
                         console.error(error);
+
                         alert(
                             "Server connection failed"
                         );
@@ -384,9 +381,6 @@ loadTasksBtn.addEventListener("click", async () => {
 
         });
 
-
-        
-        
 
         const completeButtons =
             document.querySelectorAll(".complete-btn");
@@ -416,7 +410,7 @@ loadTasksBtn.addEventListener("click", async () => {
 
                         const response =
                             await fetch(
-                                `http://localhost:5000/task/${taskId}`,
+                                `https://task-manegment-system.onrender.com/task/${taskId}`,
                                 {
                                     method: "PUT",
 
@@ -479,6 +473,9 @@ loadTasksBtn.addEventListener("click", async () => {
     }
 
 });
+
+
+
 
 
 const logoutBtn = document.getElementById("logoutBtn");
