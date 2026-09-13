@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", async (e) => {
 
     try {
         const response = await fetch(
-            "http://localhost:5000/auth/login",
+           "https://task-manegment-system.onrender.com/auth/login",
             {
                 method: "POST",
                 headers: {
@@ -23,6 +23,7 @@ loginForm.addEventListener("submit", async (e) => {
         );
 
         const data = await response.json();
+      console.log(data);
 
         if (!response.ok) {
             message.textContent =
